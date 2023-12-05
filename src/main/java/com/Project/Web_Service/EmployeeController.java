@@ -40,6 +40,19 @@ public class EmployeeController {
     }
 
 
+
+    @GetMapping(
+        path = "/{id}",
+        produces = "application/json"   
+    )
+
+    public Employee getEmployee(@PathVariable Integer id) {
+        return employeeManager.getEmployee(id);
+    }
+
+
+
+
     @PostMapping(
         path = "/",
         consumes = "application/json",
@@ -86,6 +99,12 @@ public class EmployeeController {
            return ResponseEntity.notFound().build();
         }
     }
+
+    @DeleteMapping(
+         path = "/",
+        consumes = "application/json",
+        produces = "application/json"
+    )
 
      public ResponseEntity<Object> deleteEmployee(@PathVariable Integer id ) {
 

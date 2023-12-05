@@ -80,14 +80,14 @@ public class EmployeeManager {
 
     public Employee getEmployee(Integer id) {
         /////////////// check if employee id is appropriate
+         Employee singleEmployee = list.getEmployeeList().get(id);
+
         if( list == null || id < 0 || id > list.getEmployeeList().size()) {
               System.out.println("Employee never exist or multiple employees db never exist");
               return null;
         }
 
-        Employee singleEmployee = list.getEmployeeList().get(id);
-
-         if (singleEmployee == null ) {
+         else if (list.getEmployeeList().get(id) == null ) {
              System.out.println("Employee never exist");
          }
          return singleEmployee;
