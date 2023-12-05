@@ -100,26 +100,24 @@ public class EmployeeManager {
         /////////////// check if employye exist
         if (list == null) {
 /////// if the list db is empty then u have to create a db and make its id to 1 or first
-           Integer firstId = list.getEmployeeList().size() + 1;
-            employee.setId(firstId);
-
             list = new Employees();
-            
+            employee.setId(1);
             list.employeeList.add(employee);
-
         }
+        // Check if id is within bounds
+        else if (id < 0 || id > list.getEmployeeList().size()) {
+            System.out.println("Invalid id for creating employee");
+           
+        } 
+        /////// if some list db is there then u have to append a created  db and make its id after the previosu db
 
-/////// if some list db is there then u have to append a created  db and make its id after the previosu db
-        else {
-                // list.getEmployeeList().add(employee); 
-                Integer newId = list.getEmployeeList().size() + 1;
-                employee.setId(newId);
-
-                list.getEmployeeList().add(employee); 
-            }
-        
-         return list;
-         
+         else {
+            Integer newId = list.getEmployeeList().size() + 1;
+            employee.setId(newId);
+            list.getEmployeeList().add(employee); 
+            System.out.println("Invalid id for creating employee");
+        }
+        return list;
     }
 
      public Employees updateEmployee(Integer id, Employee updatedEmployee) {
