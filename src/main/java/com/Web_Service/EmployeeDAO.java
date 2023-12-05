@@ -67,7 +67,7 @@ public class EmployeeDAO {
   
     }
 
-    public Employees getEmployees() {
+    public Employees getAllEmployees() {
         return list;
     }
 
