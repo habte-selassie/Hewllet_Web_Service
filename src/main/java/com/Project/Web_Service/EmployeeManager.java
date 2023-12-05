@@ -1,8 +1,8 @@
-package com.Web_Service;
+package com.Project.Web_Service;
 
 import org.springframework.stereotype.Repository;
 
-import com.Web_Service.Employees;
+import com.Project.Web_Service.Employees;
 
 @Repository
 
