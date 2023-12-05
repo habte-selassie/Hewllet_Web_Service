@@ -140,14 +140,14 @@ public class EmployeeManager {
          return list;
     }
 
-     public Employees deleteEmployee(Integer id, Employee deletedEmployee) {
+     public Employees deleteEmployee(Integer id) {
          /////////////// check if employye exist
             if (list.getEmployeeList().get(id) == null) {
               System.out.println("Employee not found in the list");
           }
 
            else {
-              list.getEmployeeList().remove(deletedEmployee);
+              list.getEmployeeList().remove((int) id);
            }
            return list;
     }

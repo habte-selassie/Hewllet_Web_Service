@@ -4,6 +4,7 @@ import java.net.URI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -22,11 +23,11 @@ import com.Project.Web_Service.Employees;
 public class EmployeeController {
 
     // @Autowired
-    private final EmployeeManager employeeDAO;
+    private final EmployeeManager employeeManager;
 
      @Autowired
-    public  EmployeeController(EmployeeManager employeeDAO) {
-        this.employeeDAO = employeeDAO;
+    public  EmployeeController(EmployeeManager employeeManager) {
+        this.employeeManager = employeeManager;
     }
 
     @GetMapping(
@@ -35,7 +36,7 @@ public class EmployeeController {
     )
 
     public Employees getEmployees() {
-        return employeeDAO.getAllEmployees();
+        return employeeManager.getAllEmployees();
     }
 
 
@@ -47,7 +48,7 @@ public class EmployeeController {
 
     public ResponseEntity<Object> addEmployee(@RequestBody Employee employee) {
 
-        Integer id = employeeDAO
+        Integer id = employeeManager
         .getAllEmployees()
         .getEmployeeList()
         .size()
@@ -55,7 +56,7 @@ public class EmployeeController {
 
          employee.setId(id);
 
-         employeeDAO.addEmployee(employee);
+         employeeManager.addEmployee(employee);
 
          URI location  = ServletUriComponentsBuilder
          .fromCurrentRequest()
@@ -67,5 +68,37 @@ public class EmployeeController {
                      
                           
     }
+
+    @PutMapping(
+        path = "/",
+        consumes = "application/json",
+        produces = "application/json"
+    )
+
+    public ResponseEntity<Object> updateEmployee(@PathVariable Integer id , @RequestBody Employee updatedEmployee) {
+
+        Employees updatedList = employeeManager.updateEmployee(id,updatedEmployee);
+
+        if(updatedList != null) {
+           return ResponseEntity.ok(updatedList);
+        }
+        else {
+           return ResponseEntity.notFound().build();
+        }
+    }
+
+     public ResponseEntity<Object> deleteEmployee(@PathVariable Integer id ) {
+
+        Employees updatedList = employeeManager.deleteEmployee(id);
+
+        if(updatedList != null) {
+           return ResponseEntity.ok(updatedList);
+        }
+        else {
+           return ResponseEntity.notFound().build();
+        }
+    }
+
+
 }
 
