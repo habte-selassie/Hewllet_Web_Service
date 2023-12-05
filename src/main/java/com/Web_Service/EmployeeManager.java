@@ -6,7 +6,7 @@ import com.Web_Service.Employees;
 
 @Repository
 
-public class EmployeeDAO {
+public class EmployeeManager {
 
     private static Employees list = new Employees();
 

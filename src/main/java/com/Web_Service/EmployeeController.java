@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.Web_Service.Employee;
-import com.Web_Service.EmployeeDAO;
+import com.Web_Service.EmployeeManager;
 import com.Web_Service.Employees;
 
 @RestController
@@ -22,10 +22,10 @@ import com.Web_Service.Employees;
 public class EmployeeController {
 
     // @Autowired
-    private final EmployeeDAO employeeDAO;
+    private final EmployeeManager employeeDAO;
 
      @Autowired
-    public  EmployeeController(EmployeeDAO employeeDAO) {
+    public  EmployeeController(EmployeeManager employeeDAO) {
         this.employeeDAO = employeeDAO;
     }
 
