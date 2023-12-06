@@ -24,7 +24,7 @@ public class EmployeeTest {
     public void testSetterAndGetter() {
         // Given 
 
-        Employee employee = new Employee(null, null, null, null, null, null);
+        Employee employee = new Employee();
 
 
         // when 
