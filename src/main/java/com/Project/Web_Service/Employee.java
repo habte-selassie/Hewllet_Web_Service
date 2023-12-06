@@ -5,7 +5,7 @@ public class Employee {
     private Integer id;
     private String firstName;
     private String lastName;
-    private Integer employeeID;
+    private Integer employeeId;
     private String title;
     private String email;
 
@@ -13,13 +13,13 @@ public class Employee {
     public Employee () {}
 
     public Employee (  Integer id, String firstName, String lastName, 
-    Integer employeeID, String title, String email) {
+    Integer employeeId, String title, String email) {
 
         super();
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.employeeID = employeeID;
+        this.employeeId = employeeId;
         this.title = title;
         this.email = email;
                         
@@ -32,7 +32,7 @@ public class Employee {
          + "id = " + id + ","
          + "firstName = " + firstName + ","
          + "lastName = " + lastName + ","
-         + "employeeId = " + employeeID + ","
+         + "employeeId = " + employeeId + ","
          + "title = " + title + ","
          + "email = " + email +
          "]";
@@ -68,12 +68,12 @@ public class Employee {
 
      
 
-    public void setEmployeeId(Integer employeeID) {
-        this.employeeID = employeeID;
+    public void setEmployeeId(Integer employeeId) {
+        this.employeeId = employeeId;
     }
 
     public Integer getEmployeeId() {
-        return employeeID;
+        return employeeId;
     }
  
 
