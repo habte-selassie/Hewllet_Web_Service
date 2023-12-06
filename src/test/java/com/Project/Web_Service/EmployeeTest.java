@@ -7,7 +7,7 @@ public class EmployeeTest {
     @Test
     public void testEmployeeToString () {
         // given
-        Employee employee = new Employee(1,"Habte Selassie","Fitsum",180202,"Software Engineer","habdev0@gmail.com");
+        Employee employee = new Employee(1,"Habte Selassie","Fitsum",180202,"habdev0@gmail.com","Software Engineer");
 
         // when 
 
@@ -15,7 +15,7 @@ public class EmployeeTest {
 
         //// then
 
-        String expectedToString = "Employee [id = 1, firstName = Habte Selassie, lastName = Fitsum, employeeId = 180202 , title = Software Enginner, email = habdev0@gmail.com ]";
+        String expectedToString = "Employee [id = 1, firstName = Habte Selassie, lastName = Fitsum, employeeId = 180202 , title = Software Engineer, email = habdev0@gmail.com ]";
 
         Assertions.assertEquals(expectedToString,toStringResult);
     }
