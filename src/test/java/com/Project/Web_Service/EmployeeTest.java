@@ -44,7 +44,7 @@ public class EmployeeTest {
         Assertions.assertEquals("Fitsum",employee.getLastName());
         Assertions.assertEquals(180202,employee.getEmployeeId());
         Assertions.assertEquals("Software Engineer",employee.getTitle());
-        Assertions.assertEquals("habdev@gmail.com",employee.getEmail());
+        Assertions.assertEquals("habdev0@gmail.com",employee.getEmail());
 
     }
 }
