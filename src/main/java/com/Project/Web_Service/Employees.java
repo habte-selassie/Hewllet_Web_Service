@@ -20,8 +20,8 @@ public class Employees {
         return employeeList;
     }
 
-    public void setEmployeeList(List<Employee> employeeList) {
-        this.employeeList = employeeList;
+    public void setEmployeeList(List<Employee> newEmployeeList) {
+        this.employeeList = newEmployeeList;
     }
 
 }
