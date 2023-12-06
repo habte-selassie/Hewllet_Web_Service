@@ -32,8 +32,8 @@ public class Employee {
          + "firstName = " + firstName +","
          + "lastName = " + lastName +","
          + "employeeID = " + employeeID +","
-         + "email = " + email +","
          + "title = " + title +","
+         + "email = " + email +","
          + "]";
        
     }
