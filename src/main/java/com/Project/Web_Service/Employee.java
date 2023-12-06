@@ -26,70 +26,77 @@ public class Employee {
 
     }
 
-    @Override
-    public String toString() {
-        return "Employee ["
-         + "id = " + id +","
-         + "firstName = " + firstName +","
-         + "lastName = " + lastName +","
-         + "employeeID = " + employeeID +","
-         + "title = " + title +","
-         + "email = " + email +","
-         + "]";
-       
-    }
+      @Override
+     public String toString() {
+     return "Employee ["
+         + "id = " + id + ","
+         + "firstName = " + firstName + ","
+         + "lastName = " + lastName + ","
+         + "employeeId = " + employeeID + ","
+         + "title = " + title + ","
+         + "email = " + email +
+         "]";
+         }
+
+
+     public void setId(Integer id) {
+        this.id = id;
+     }
 
     public Integer geId() {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+   
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }  
 
      public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
      public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-     public Integer getEmployeeId() {
-        return employeeID;
-    }
+     
 
     public void setEmployeeId(Integer employeeID) {
         this.employeeID = employeeID;
+    }
+
+    public Integer getEmployeeId() {
+        return employeeID;
+    }
+
+    
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
      public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-     public String getTitle() {
-        return title;
-    }
+     
 
     public void setTitle(String title) {
         this.title = title;
     }
 
-    public Integer getId() {
-        return null;
+    public String getTitle() {
+        return title;
     }
+
+   
 
 
 }
