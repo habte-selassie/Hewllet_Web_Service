@@ -6,22 +6,22 @@ public class Employee {
     private String firstName;
     private String lastName;
     private Integer employeeID;
-    private String email;
     private String title;
+    private String email;
 
 
     public Employee () {}
 
     public Employee (  Integer id, String firstName, String lastName, 
-    Integer employeeID, String email, String title) {
+    Integer employeeID, String title, String email) {
 
         super();
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.employeeID = employeeID;
-        this.email = email;
         this.title = title;
+        this.email = email;
                         
 
     }
@@ -43,7 +43,7 @@ public class Employee {
         this.id = id;
      }
 
-    public Integer geId() {
+    public Integer getId() {
         return id;
     }
 
@@ -75,18 +75,7 @@ public class Employee {
     public Integer getEmployeeId() {
         return employeeID;
     }
-
-    
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-     public String getEmail() {
-        return email;
-    }
-
-     
+ 
 
     public void setTitle(String title) {
         this.title = title;
@@ -96,6 +85,13 @@ public class Employee {
         return title;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+     public String getEmail() {
+        return email;
+    }
    
 
 

@@ -6,9 +6,10 @@ import com.Project.Web_Service.Employee;
 public class EmployeeTest {
     
     @Test
+  
     public void testEmployeeToString () {
         // given
-        Employee employee = new Employee(1,"Habte Selassie","Fitsum",180202,"habdev0@gmail.com","Software Engineer");
+        Employee employee = new Employee(1,"Habte Selassie","Fitsum",180202,"Software Engineer"," habdev0@gmail.com");
 
         // when 
 
@@ -16,9 +17,13 @@ public class EmployeeTest {
 
         //// then
 
-        String expectedToString = "Employee [id = 1,firstName = Habte Selassie,lastName = Fitsum,employeeId = 180202,title = Software Engineer,email = habdev0@gmail.com ]";
+        //String expectedToString = "Employee [id = 1,firstName = Habte Selassie,lastName = Fitsum,employeeId = 180202,title = Software Engineer,email = habdev0@gmail.com ]";
 
-        Assertions.assertEquals(expectedToString,toStringResult);
+      //  String expectedToString = "Employee [id = 1, firstName = Habte Selassie, lastName = Fitsum, employeeId = 180202, title = Software Engineer, email = habdev0@gmail.com]";
+
+        String expectedToString1 = "Employee [id = 1, firstName = Habte Selassie, lastName = Fitsum, employeeId = 180202, title = Software Engineer, email = habdev0@gmail.com]";
+
+        Assertions.assertEquals(expectedToString1,toStringResult);
     }
 
     @Test
@@ -31,7 +36,7 @@ public class EmployeeTest {
         // when 
 
         employee.setId(1);
-        employee.setFirstName("habte Selassie");
+        employee.setFirstName("Habte Selassie");
         employee.setLastName("Fitsum");
         employee.setEmployeeId(180202);
         employee.setTitle("Software Engineer");
@@ -40,8 +45,8 @@ public class EmployeeTest {
 
         // then 
 
-        Assertions.assertEquals(1,employee.getId());
-        Assertions.assertEquals("Habte Selassie",employee.getFirstName());
+        Assertions.assertEquals(1, employee.geId());
+        Assertions.assertEquals("Habte Selassie", employee.getFirstName());
         Assertions.assertEquals("Fitsum",employee.getLastName());
         Assertions.assertEquals(180202,employee.getEmployeeId());
         Assertions.assertEquals("Software Engineer",employee.getTitle());
