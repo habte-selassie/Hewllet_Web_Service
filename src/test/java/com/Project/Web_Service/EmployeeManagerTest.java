@@ -53,7 +53,33 @@ public class EmployeeManagerTest {
         
     }
 
-    
+
+      @Test
+    public void testUpdateEmployee() {
+         // Assuming the employee creation is successful
+        Employee newEmployee = new Employee(2, "John", "Doe", 25, "john.doe@example.com", "Software Developer");
+        
+        Employees updatedDataByNewEmployees = employeeManager.createEmployee(newEmployee, newEmployee.getId());
+
+        Assertions.assertNotNull(updatedDataByNewEmployees);
+        Assertions.assertEquals(2,updatedDataByNewEmployees.getEmployeeList().size());
+        
+    }
+
+
+      @Test
+    public void testDeleteEmployee() {
+         // Assuming the employee creation is successful
+        Employee newEmployee = new Employee(2, "John", "Doe", 25, "john.doe@example.com", "Software Developer");
+        
+        Employees updatedDataByNewEmployees = employeeManager.createEmployee(newEmployee, newEmployee.getId());
+
+        Assertions.assertNotNull(updatedDataByNewEmployees);
+        Assertions.assertEquals(2,updatedDataByNewEmployees.getEmployeeList().size());
+        
+    }
+
+
 
 
 
