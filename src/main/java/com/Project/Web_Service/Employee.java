@@ -86,5 +86,9 @@ public class Employee {
         this.title = title;
     }
 
+    public Integer getId() {
+        return null;
+    }
+
 
 }
