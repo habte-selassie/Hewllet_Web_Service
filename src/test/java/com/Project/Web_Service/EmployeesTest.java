@@ -10,7 +10,7 @@ import com.Project.Web_Service.Employees;
 public class EmployeesTest {
 
     
-     public List<Employee> employeeList;
+    //  public List<Employee> employeeList;
    
 
     @Test
@@ -22,14 +22,22 @@ public class EmployeesTest {
         // when
         List<Employee> employeeList = employees.getEmployeeList();
 
-        List <Employee> newEmployeeList = new ArrayList<>();
-        
-
         // then
         Assertions.assertNotNull(employeeList, "The List is here so we can return the result");
-        Assertions.assertNull(newEmployeeList, "The List is empty so create an arraylist so we can return the result");
+        Assertions.assertTrue(employeeList.isEmpty(), "The employeeList should be empty initially");
 
+        List <Employee> newEmployeeList = employees.getEmployeeList();
+        Assertions.assertEquals(new ArrayList<>(), newEmployeeList, "The employeeList should be the same instance");
+       
     }
+
+
+
+
+
+
+
+
 
     @Test
     public void testSetEmployeeList() {
