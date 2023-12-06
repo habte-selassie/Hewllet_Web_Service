@@ -2,6 +2,7 @@ package com.Project.Web_Service;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import com.Project.Web_Service.Employee;
 public class EmployeeTest {
     
     @Test
@@ -15,7 +16,7 @@ public class EmployeeTest {
 
         //// then
 
-        String expectedToString = "Employee [id = 1, firstName = Habte Selassie, lastName = Fitsum, employeeId = 180202 , title = Software Engineer, email = habdev0@gmail.com ]";
+        String expectedToString = "Employee [id = 1,firstName = Habte Selassie,lastName = Fitsum,employeeId = 180202,title = Software Engineer,email = habdev0@gmail.com ]";
 
         Assertions.assertEquals(expectedToString,toStringResult);
     }
