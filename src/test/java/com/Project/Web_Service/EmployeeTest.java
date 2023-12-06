@@ -17,13 +17,10 @@ public class EmployeeTest {
 
         //// then
 
-        //String expectedToString = "Employee [id = 1,firstName = Habte Selassie,lastName = Fitsum,employeeId = 180202,title = Software Engineer,email = habdev0@gmail.com ]";
+       
+        String expectedToString = "Employee [id = 1,firstName = Habte Selassie,lastName = Fitsum,employeeId = 180202,title = Software Engineer,email = habdev0@gmail.com]";
 
-      //  String expectedToString = "Employee [id = 1, firstName = Habte Selassie, lastName = Fitsum, employeeId = 180202, title = Software Engineer, email = habdev0@gmail.com]";
-
-        String expectedToString1 = "Employee [id = 1,firstName = Habte Selassie,lastName = Fitsum,employeeId = 180202,title = Software Engineer,email = habdev0@gmail.com]";
-
-        Assertions.assertEquals(expectedToString1,toStringResult);
+        Assertions.assertEquals(expectedToString,toStringResult);
     }
 
     @Test
